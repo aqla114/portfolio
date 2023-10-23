@@ -8,6 +8,7 @@ import {
 	HStack,
 	Heading,
 	Link,
+	SimpleGrid,
 	Stack,
 	StackDivider,
 	Text,
@@ -16,7 +17,7 @@ import {
 export default function Home() {
 	return (
 		<Providers>
-			<Box w="100%" p="20" bg="gray.50">
+			<Box w="100%" p="5%" bg="gray.50">
 				<Heading as="h1" size="3xl">
 					HN: どや
 				</Heading>
@@ -105,7 +106,7 @@ export default function Home() {
 						</Heading>
 					</CardHeader>
 					<CardBody>
-						<HStack spacing={3} fontSize={48}>
+						<SimpleGrid spacing={'16px'} minChildWidth={'51px'} fontSize={48}>
 							<i className="devicon-typescript-plain colored" />
 							<i className="devicon-react-original-wordmark colored" />
 							<i className="devicon-nextjs-original-wordmark colored" />
@@ -119,7 +120,8 @@ export default function Home() {
 
 							<i className="devicon-mysql-plain-wordmark colored" />
 							<i className="devicon-github-original-wordmark colored" />
-						</HStack>
+						</SimpleGrid>
+						<HStack spacing={3} fontSize={48}></HStack>
 					</CardBody>
 				</Card>
 				<Card marginTop={10}>
