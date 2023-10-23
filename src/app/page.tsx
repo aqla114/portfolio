@@ -1,95 +1,163 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { Providers } from './provider';
+import 'devicon/devicon.min.css';
+import {
+	Box,
+	Card,
+	CardBody,
+	CardHeader,
+	HStack,
+	Heading,
+	Link,
+	Stack,
+	StackDivider,
+	Text,
+} from '@chakra-ui/react';
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	return (
+		<Providers>
+			<Box w="100%" p="20" bg="gray.50">
+				<Heading as="h1" size="3xl">
+					HN: どや
+				</Heading>
+				<Card marginTop={10}>
+					<CardHeader>
+						<Heading as="h2" size="xl">
+							About me
+						</Heading>
+					</CardHeader>
+					<CardBody>
+						<Stack divider={<StackDivider />} spacing="4">
+							<Box>
+								<Heading size="xs">おしごと</Heading>
+								<Text pt="2" fontSize="sm">
+									Web エンジニア
+								</Text>
+							</Box>
+							<Box>
+								<Heading size="xs" textTransform="uppercase">
+									生まれ
+								</Heading>
+								<Text pt="2" fontSize="sm">
+									1997年 金沢市
+								</Text>
+							</Box>
+							<Box>
+								<Heading size="xs" textTransform="uppercase">
+									好きなもの
+								</Heading>
+								<Text pt="2" fontSize="sm">
+									アニメ、ゲーム、ボルダリング、ギター
+								</Text>
+							</Box>
+							<Box>
+								<Heading size="xs" textTransform="uppercase">
+									使っているエディタ
+								</Heading>
+								<Text pt="2" fontSize="sm">
+									<i className="devicon-vscode-plain" /> VSCode
+								</Text>
+							</Box>
+						</Stack>
+					</CardBody>
+				</Card>
+				<Card marginTop={10}>
+					<CardHeader>
+						<Heading as="h2" size="xl">
+							Careers
+						</Heading>
+					</CardHeader>
+					<CardBody>
+						<Stack divider={<StackDivider />} spacing="4">
+							<Box>
+								<Heading size="xs">株式会社HERP</Heading>
+								<Text pt="2" fontSize="sm">
+									2023/11 -
+								</Text>
+							</Box>
+							<Box>
+								<Heading size="xs">株式会社クックパッド</Heading>
+								<Text pt="2" fontSize="sm">
+									2021/04 - 2023/10
+									<br />
+									１年目は新規事業のサーバーサイドエンジニア。２年目以降はレシピサービスの基盤周りを見るエンジニア。
+									<br />
+									テックリードとかグループリーダーとかサービスのリアーキテクティングプロジェクトとかやってた。
+								</Text>
+							</Box>
+							<Box>
+								<Heading size="xs">
+									東京大学大学院情報理工学系研究科電子情報工学専攻
+								</Heading>
+								<Text pt="2" fontSize="sm">
+									2019/04 - 2021/03
+									<br />
+									自然言語処理・機械学習あたりをやってた。
+								</Text>
+							</Box>
+						</Stack>
+					</CardBody>
+				</Card>
+				<Card marginTop={10}>
+					<CardHeader>
+						<Heading as="h2" size="xl">
+							Skills
+						</Heading>
+					</CardHeader>
+					<CardBody>
+						<HStack spacing={3} fontSize={48}>
+							<i className="devicon-typescript-plain colored" />
+							<i className="devicon-react-original-wordmark colored" />
+							<i className="devicon-nextjs-original-wordmark colored" />
+							<i className="devicon-nodejs-plain-wordmark colored" />
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+							<i className="devicon-ruby-plain colored" />
+							<i className="devicon-rails-plain-wordmark colored" />
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+							<i className="devicon-python-plain colored" />
+							<i className="devicon-pytorch-plain-wordmark colored" />
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+							<i className="devicon-mysql-plain-wordmark colored" />
+							<i className="devicon-github-original-wordmark colored" />
+						</HStack>
+					</CardBody>
+				</Card>
+				<Card marginTop={10}>
+					<CardHeader>
+						<Heading as="h2" size="xl">
+							Resources
+						</Heading>
+					</CardHeader>
+					<CardBody>
+						<Stack divider={<StackDivider />} spacing="4">
+							<Box>
+								<Heading size="xs">GitHub</Heading>
+								<Link href="https://github.com/aqla114" isExternal>
+									<Text pt="2" fontSize="sm">
+										https://github.com/aqla114
+									</Text>
+								</Link>
+							</Box>
+							<Box>
+								<Heading size="xs">Blog</Heading>
+								<Link href="https://hilinker.hatenablog.com" isExternal>
+									<Text pt="2" fontSize="sm">
+										https://hilinker.hatenablog.com
+									</Text>
+								</Link>
+							</Box>
+							<Box>
+								<Heading size="xs">Twitter</Heading>
+								<Link href="https://twitter.com/hilinker" isExternal>
+									<Text pt="2" fontSize="sm">
+										@hilinker
+									</Text>
+								</Link>
+							</Box>
+						</Stack>
+					</CardBody>
+				</Card>
+			</Box>
+		</Providers>
+	);
 }
